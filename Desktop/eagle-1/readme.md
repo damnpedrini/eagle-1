@@ -1,5 +1,5 @@
 
-# Eagle-1 Model Price Prediction (Bitcoin)
+# Eagle-1 Model Price Prediction (Bitcoin) 🦅
 
 This project is designed to forecast cryptocurrency prices, with a focus on **memecoins** like **Bitcoin**. The goal is to utilize historical price data and machine learning techniques to make predictions for the next 7 days.
 
