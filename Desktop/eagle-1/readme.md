@@ -1,5 +1,4 @@
-
-# Eagle-1 Model Price Prediction (Bitcoin) 🦅
+# Eagle-1 Model Price Prediction (Bitcoin)
 
 This project is designed to forecast cryptocurrency prices, with a focus on **memecoins** like **Bitcoin**. The goal is to utilize historical price data and machine learning techniques to make predictions for the next 7 days.
 
@@ -34,6 +33,34 @@ pip install yfinance pandas matplotlib prophet requests
 4. **Make Predictions**: The model forecasts Bitcoin prices for the next 7 days.
 5. **Convert to BRL**: The forecasted Bitcoin price in USD is converted to BRL using the latest exchange rate.
 6. **View Results**: The forecast is displayed both in the terminal and as a graph.
+
+## Prediction Logic (Equation)
+
+The prediction model follows this equation:
+
+### **Bitcoin Price Prediction (BTC/USD)**
+
+\[
+P_{t+1} = f(P_t, V_t, MA_t)
+\]
+
+Where:
+- \( P_t \) = Bitcoin price on day \( t \) (dependent variable)
+- \( V_t \) = 7-day rolling average of trading volume (additional regressor)
+- \( MA_t \) = 14-day moving average of closing price (additional regressor)
+- \( f(\cdot) \) = Prophet model function incorporating seasonality and trends
+
+### **Conversion to BRL**
+
+After predicting the price in USD, the conversion to BRL is done using:
+
+\[
+P_{BRL, t+1} = P_{t+1} \times R
+\]
+
+Where:
+- \( P_{BRL, t+1} \) = Predicted Bitcoin price in BRL
+- \( R \) = USD to BRL exchange rate fetched from an external API
 
 ## Example Output
 
