@@ -11,7 +11,8 @@ btc = yf.download("BTC-USD", period="10y", interval="1d")
 
 # 2. Create additional columns to improve the forecast
 btc["Volume"] = btc["Volume"].rolling(window=7, min_periods=1).mean()
-btc["Moving_Avg"] = btc["Close"].rolling(window=14, min_periods=1).mean()
+btc["Moving_Avg"] = btc["Close"].rolling(window=50, min_periods=1).mean()
+
 
 # Technical indicators
 btc['RSI'] = 100 - (100 / (1 + btc['Close'].pct_change().rolling(14).mean()))
@@ -45,8 +46,9 @@ model.add_regressor("macd")
 model.add_regressor("sentiment")
 model.fit(df)
 
-# 6. Create future dates to predict (next 7 days)
-future = model.make_future_dataframe(periods=7)
+# 6. Create future dates to predict (next 30 days)
+future = model.make_future_dataframe(periods=30)
+
 future["volume"] = df["volume"].iloc[-1]
 future["moving_avg"] = df["moving_avg"].iloc[-1]
 future["rsi"] = df["rsi"].iloc[-1]
@@ -63,12 +65,13 @@ usd_to_brl = response["rates"]["BRL"]
 forecast["BTC_BRL"] = forecast["yhat"] * usd_to_brl
 
 # 9. Display forecast
-forecast_7d = forecast[["ds", "yhat", "BTC_BRL"]].tail(7)
-forecast_7d.columns = ["Date", "BTC Price (USD)", "BTC Price (BRL)"]
-forecast_7d["BTC Price (USD)"] = forecast_7d["BTC Price (USD)"].apply(lambda x: f"{x:,.2f}")
-forecast_7d["BTC Price (BRL)"] = forecast_7d["BTC Price (BRL)"].apply(lambda x: f"{x:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
-print("\nBitcoin price forecast for the next 7 days:")
-print(forecast_7d.to_string(index=False))
+forecast_30d = forecast[["ds", "yhat", "BTC_BRL"]].tail(30)
+forecast_30d.columns = ["Date", "BTC Price (USD)", "BTC Price (BRL)"]
+forecast_30d["BTC Price (USD)"] = forecast_30d["BTC Price (USD)"].apply(lambda x: f"{x:,.2f}")
+forecast_30d["BTC Price (BRL)"] = forecast_30d["BTC Price (BRL)"].apply(lambda x: f"{x:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+print("\nBitcoin price forecast for the next 30 days:")
+print(forecast_30d.to_string(index=False))
+
 
 # 10. Plot results
 plt.figure(figsize=(12,6))
