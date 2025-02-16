@@ -1,12 +1,42 @@
-
 # Eagle-1 Model Price Prediction (Bitcoin)
 
-This project is designed to forecast cryptocurrency prices, with a focus on **memecoins** like **Bitcoin**. The goal is to utilize historical price data and machine learning techniques to make predictions for the next 7 days.
+This project is designed to forecast cryptocurrency prices, with a focus on **memecoins** like **Bitcoin**. The goal is to utilize historical price data and machine learning techniques to make predictions for the next 30 days.
+
+## Version 1.1 - Release Notes
+
+### Changes & Improvements:
+- **Extended Forecast Window**: Predictions now cover **30 days** instead of **7 days**.
+- **Enhanced Moving Averages**: The **14-day moving average** was replaced with a **50-day moving average** for better trend tracking.
+- **Refined RSI Calculation**: The **14-day RSI** has been updated to a **21-day RSI** to provide a more stable overbought/oversold indicator.
+- **Mathematical Adjustments**:
+  - Previous moving average:
+    
+    \[
+    MA_{14} = \frac{1}{14} \sum_{i=0}^{13} Price_i
+    \]
+    
+    Updated moving average:
+    
+    \[
+    MA_{50} = \frac{1}{50} \sum_{i=0}^{49} Price_i
+    \]
+  - Previous RSI Calculation:
+    
+    \[
+    RSI_{14} = 100 - \frac{100}{1 + RS_{14}}
+    \]
+    
+    New RSI Calculation:
+    
+    \[
+    RSI_{21} = 100 - \frac{100}{1 + RS_{21}}
+    \]
 
 ## Features
 
-- **Price Prediction**: The model forecasts Bitcoin prices for the next 7 days based on the latest historical data.
-- **Moving Averages**: Implements 14-day moving averages and rolling volume data to improve prediction accuracy.
+- **Price Prediction**: The model forecasts Bitcoin prices for the next **30 days** based on historical data.
+- **Moving Averages**: Implements a **50-day moving average** and rolling volume data to improve prediction accuracy.
+- **RSI Calculation**: Now uses **21-day RSI** instead of 14 days for better trend stability.
 - **BRL Conversion**: Converts the predicted Bitcoin price from USD to BRL based on the current exchange rate.
 - **Visualization**: Displays a graph showing the predictions along with uncertainty intervals.
 
@@ -19,28 +49,29 @@ The project relies on the following Python libraries:
 - **`matplotlib`**: To generate visualizations of the data and predictions.
 - **`prophet`**: For time series modeling and making predictions.
 - **`requests`**: To fetch the current exchange rate from USD to BRL.
+- **`vaderSentiment`**: To incorporate sentiment analysis into price prediction.
 
 To install the required dependencies, you can run:
 
 ```bash
-pip install yfinance pandas matplotlib prophet requests
+pip install yfinance pandas matplotlib prophet requests vaderSentiment
 ```
 
 ## How to Use
 
 1. **Download Data**: The project pulls 10 years of historical Bitcoin data from Yahoo Finance.
-2. **Prepare the Model**: The script processes the data, adding a 14-day moving average and a rolling volume to enhance prediction accuracy.
+2. **Prepare the Model**: The script processes the data, adding a **50-day moving average** and a rolling volume to enhance prediction accuracy.
 3. **Train the Prophet Model**: The Prophet model is trained with the historical data and additional regressors for better forecasting.
-4. **Make Predictions**: The model forecasts Bitcoin prices for the next 7 days.
+4. **Make Predictions**: The model forecasts Bitcoin prices for the next **30 days**.
 5. **Convert to BRL**: The forecasted Bitcoin price in USD is converted to BRL using the latest exchange rate.
 6. **View Results**: The forecast is displayed both in the terminal and as a graph.
 
 ## Example Output
 
-When the code is run, you'll see the following output showing the predicted Bitcoin prices for the next 7 days, both in USD and BRL:
+When the code is run, you'll see the following output showing the predicted Bitcoin prices for the next **30 days**, both in USD and BRL:
 
 ```
-Bitcoin Price Prediction for the Next 7 Days:
+Bitcoin Price Prediction for the Next 30 Days:
  Date         BTC Price (USD)   BTC Price (BRL)
  2025-02-16    50000             250000
  2025-02-17    50500             252500
@@ -53,13 +84,14 @@ Bitcoin Price Prediction for the Next 7 Days:
 The project also generates a graph that shows:
 
 - The historical Bitcoin price data.
-- The predicted Bitcoin price for the next 7 days.
+- The predicted Bitcoin price for the next **30 days**.
 - Uncertainty intervals around the prediction to visualize the model's confidence.
 
 ## Conclusion
 
-This project serves as a foundational framework for predicting memecoin prices, with an emphasis on Bitcoin, using machine learning techniques. It can be expanded to include other cryptocurrencies or more advanced prediction models.
+This project serves as a foundational framework for predicting memecoin prices, with an emphasis on Bitcoin, using machine learning techniques. It can be expanded to include other cryptocurrencies, on-chain data, or more advanced prediction models.
 
 ## License
 
 The project is licensed under the [MIT License](LICENSE).
+
