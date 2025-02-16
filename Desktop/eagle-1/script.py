@@ -13,8 +13,9 @@ btc = yf.download("BTC-USD", period="10y", interval="1d")
 btc["Volume"] = btc["Volume"].rolling(window=7, min_periods=1).mean()
 btc["Moving_Avg"] = btc["Close"].rolling(window=50, min_periods=1).mean()
 
+
 # Technical indicators
-btc['RSI'] = 100 - (100 / (1 + btc['Close'].pct_change().rolling(21).mean()))
+btc['RSI'] = 100 - (100 / (1 + btc['Close'].pct_change().rolling(14).mean()))
 short_ema = btc['Close'].ewm(span=12, adjust=False).mean()
 long_ema = btc['Close'].ewm(span=26, adjust=False).mean()
 btc['MACD'] = short_ema - long_ema
@@ -47,6 +48,7 @@ model.fit(df)
 
 # 6. Create future dates to predict (next 30 days)
 future = model.make_future_dataframe(periods=30)
+
 future["volume"] = df["volume"].iloc[-1]
 future["moving_avg"] = df["moving_avg"].iloc[-1]
 future["rsi"] = df["rsi"].iloc[-1]
@@ -70,6 +72,7 @@ forecast_30d["BTC Price (BRL)"] = forecast_30d["BTC Price (BRL)"].apply(lambda x
 print("\nBitcoin price forecast for the next 30 days:")
 print(forecast_30d.to_string(index=False))
 
+
 # 10. Plot results
 plt.figure(figsize=(12,6))
 plt.plot(df["ds"], df["y"], label="Historical BTC/USD", linewidth=2)
@@ -81,3 +84,4 @@ plt.title("Accurate Bitcoin Price Forecast with Sentiment & Indicators")
 plt.legend()
 plt.grid()
 plt.show()
+
