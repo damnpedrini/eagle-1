@@ -9,12 +9,11 @@ This project is designed to forecast cryptocurrency prices, with a focus on **me
 - **Enhanced Moving Averages**: The **14-day moving average** was replaced with a **50-day moving average** for better trend tracking.
 - **Refined RSI Calculation**: The **14-day RSI** has been updated to a **21-day RSI** to provide a more stable overbought/oversold indicator.
 
-
 ## Features
 
 - **Price Prediction**: The model forecasts Bitcoin prices for the next **30 days** based on historical data.
 - **Moving Averages**: Implements a **50-day moving average** and rolling volume data to improve prediction accuracy.
-- **RSI Calculation**: Now uses **21-day RSI** instead of 14 days for better trend stability.
+- **RSI Calculation**: Now uses a **21-day RSI** instead of a 14-day RSI for better trend stability.
 - **BRL Conversion**: Converts the predicted Bitcoin price from USD to BRL based on the current exchange rate.
 - **Visualization**: Displays a graph showing the predictions along with uncertainty intervals.
 
@@ -29,7 +28,7 @@ The project relies on the following Python libraries:
 - **`requests`**: To fetch the current exchange rate from USD to BRL.
 - **`vaderSentiment`**: To incorporate sentiment analysis into price prediction.
 
-To install the required dependencies, you can run:
+To install the required dependencies, run:
 
 ```bash
 pip install yfinance pandas matplotlib prophet requests vaderSentiment
@@ -38,8 +37,8 @@ pip install yfinance pandas matplotlib prophet requests vaderSentiment
 ## How to Use
 
 1. **Download Data**: The project pulls 10 years of historical Bitcoin data from Yahoo Finance.
-2. **Prepare the Model**: The script processes the data, adding a **50-day moving average** and a rolling volume to enhance prediction accuracy.
-3. **Train the Prophet Model**: The Prophet model is trained with the historical data and additional regressors for better forecasting.
+2. **Prepare the Model**: The script processes the data, adding a **50-day moving average** and rolling volume to enhance prediction accuracy.
+3. **Train the Prophet Model**: The Prophet model is trained with historical data and additional regressors for better forecasting.
 4. **Make Predictions**: The model forecasts Bitcoin prices for the next **30 days**.
 5. **Convert to BRL**: The forecasted Bitcoin price in USD is converted to BRL using the latest exchange rate.
 6. **View Results**: The forecast is displayed both in the terminal and as a graph.
@@ -57,7 +56,7 @@ P_{t+1} = f(P_t, V_t, MA_t)
 Where:
 - \( P_t \) = Bitcoin price on day \( t \) (dependent variable)
 - \( V_t \) = 7-day rolling average of trading volume (additional regressor)
-- \( MA_t \) = 14-day moving average of closing price (additional regressor)
+- \( MA_t \) = 50-day moving average of closing price (additional regressor)
 - \( f(\cdot) \) = Prophet model function incorporating seasonality and trends
 
 ### **Conversion to BRL**
@@ -100,4 +99,3 @@ This project serves as a foundational framework for predicting memecoin prices, 
 ## License
 
 The project is licensed under the [MIT License](LICENSE).
-
