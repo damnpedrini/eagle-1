@@ -10,27 +10,6 @@ This project is designed to forecast cryptocurrency prices, with a focus on **me
 - **Refined RSI Calculation**: The **14-day RSI** has been updated to a **21-day RSI** to provide a more stable overbought/oversold indicator.
 - **Mathematical Adjustments**:
   - Previous moving average:
-    
-    \[
-    MA_{14} = \frac{1}{14} \sum_{i=0}^{13} Price_i
-    \]
-    
-    Updated moving average:
-    
-    \[
-    MA_{50} = \frac{1}{50} \sum_{i=0}^{49} Price_i
-    \]
-  - Previous RSI Calculation:
-    
-    \[
-    RSI_{14} = 100 - \frac{100}{1 + RS_{14}}
-    \]
-    
-    New RSI Calculation:
-    
-    \[
-    RSI_{21} = 100 - \frac{100}{1 + RS_{21}}
-    \]
 
 ## Features
 
