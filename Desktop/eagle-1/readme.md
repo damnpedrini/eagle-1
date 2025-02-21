@@ -8,8 +8,7 @@ This project is designed to forecast cryptocurrency prices, with a focus on **me
 - **Extended Forecast Window**: Predictions now cover **30 days** instead of **7 days**.
 - **Enhanced Moving Averages**: The **14-day moving average** was replaced with a **50-day moving average** for better trend tracking.
 - **Refined RSI Calculation**: The **14-day RSI** has been updated to a **21-day RSI** to provide a more stable overbought/oversold indicator.
-- **Mathematical Adjustments**:
-  - Previous moving average:
+
 
 ## Features
 
