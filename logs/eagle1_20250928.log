@@ -1,0 +1,43 @@
+2025-09-28 21:19:29 | INFO     | EAGLE-1:info:55 - === EAGLE-1 v2.0 INICIADO ===
+2025-09-28 21:19:29 | INFO     | EAGLE-1:info:55 - Símbolo: BTC-USD
+2025-09-28 21:19:29 | INFO     | EAGLE-1:info:55 - Período: 365d
+2025-09-28 21:19:29 | INFO     | EAGLE-1:info:55 - Previsão: 7 dias
+2025-09-28 21:19:29 | INFO     | EAGLE-1:info:55 - Arquivo de exemplo criado: sample_headlines.txt
+2025-09-28 21:19:29 | INFO     | EAGLE-1:info:55 - 📊 Buscando dados históricos...
+2025-09-28 21:19:29 | INFO     | EAGLE-1:info:55 - Buscando dados para BTC-USD - período: 365d
+2025-09-28 21:19:30 | INFO     | EAGLE-1:info:55 - Dados obtidos: 364 registros de 2024-09-30 até 2025-09-29
+2025-09-28 21:19:30 | INFO     | EAGLE-1:info:55 - 🔧 Preparando indicadores técnicos...
+2025-09-28 21:19:30 | INFO     | EAGLE-1:info:55 - Preparando features técnicas...
+2025-09-28 21:19:30 | ERROR    | EAGLE-1:error:59 - Erro ao preparar features: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:19:30 | ERROR    | EAGLE-1:error:59 - Erro em prepare_features: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:19:30 | ERROR    | EAGLE-1:error:59 - Erro na execução: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - === EAGLE-1 v2.0 INICIADO ===
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - Símbolo: BTC-USD
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - Período: 365d
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - Previsão: 7 dias
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - Arquivo de exemplo criado: sample_headlines.txt
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - 📊 Buscando dados históricos...
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - Buscando dados para BTC-USD - período: 365d
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - Dados obtidos: 364 registros de 2024-09-30 até 2025-09-29
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - 🔧 Preparando indicadores técnicos...
+2025-09-28 21:20:04 | INFO     | EAGLE-1:info:55 - Preparando features técnicas...
+2025-09-28 21:20:04 | ERROR    | EAGLE-1:error:59 - Erro ao preparar features: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:20:04 | ERROR    | EAGLE-1:error:59 - Erro em prepare_features: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:20:04 | ERROR    | EAGLE-1:error:59 - Erro na execução: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:21:04 | INFO     | EAGLE-1:info:55 - === EAGLE-1 v2.0 INICIADO ===
+2025-09-28 21:21:04 | INFO     | EAGLE-1:info:55 - Símbolo: BTC-USD
+2025-09-28 21:21:04 | INFO     | EAGLE-1:info:55 - Período: 365d
+2025-09-28 21:21:04 | INFO     | EAGLE-1:info:55 - Previsão: 7 dias
+2025-09-28 21:21:04 | INFO     | EAGLE-1:info:55 - Arquivo de exemplo criado: sample_headlines.txt
+2025-09-28 21:21:04 | INFO     | EAGLE-1:info:55 - 📊 Buscando dados históricos...
+2025-09-28 21:21:04 | INFO     | EAGLE-1:info:55 - Buscando dados para BTC-USD - período: 365d
+2025-09-28 21:21:05 | INFO     | EAGLE-1:info:55 - Dados obtidos: 364 registros de 2024-09-30 até 2025-09-29
+2025-09-28 21:21:05 | INFO     | EAGLE-1:info:55 - 🔧 Preparando indicadores técnicos...
+2025-09-28 21:21:05 | INFO     | EAGLE-1:info:55 - Preparando features técnicas...
+2025-09-28 21:21:05 | ERROR    | EAGLE-1:error:59 - Erro ao preparar features: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:21:05 | ERROR    | EAGLE-1:error:59 - Erro em prepare_features: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:21:05 | ERROR    | EAGLE-1:error:59 - Erro na execução: Cannot set a DataFrame with multiple columns to the single column volume_ratio
+2025-09-28 21:21:37 | INFO     | EAGLE-1:info:55 - Buscando dados para BTC-USD - período: 5d
+2025-09-28 21:21:37 | INFO     | EAGLE-1:info:55 - Dados obtidos: 4 registros de 2025-09-25 até 2025-09-29
+2025-09-28 21:34:14 | INFO     | EAGLE-1:info:55 - Buscando dados para BTC-USD - período: 30d
+2025-09-28 21:34:15 | INFO     | EAGLE-1:info:55 - Dados obtidos: 29 registros de 2025-08-31 até 2025-09-29
