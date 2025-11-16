@@ -4,3 +4,8 @@ yfinance
 prophet
 nltk
 matplotlib
+scipy
+mplfinance
+arch  # Para modelos GARCH avançados
+QuantLib  # Para modelos financeiros (opcional)
+statsmodels  # Para análise estatística
